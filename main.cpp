@@ -6,6 +6,7 @@ int main(){
 
   //3D Vector "Va"
   vector <vector<int> > Va;
+  vector <int> Vq;
   int Vn, q, qElement, qn; 
   int Vsize = 0, Velement = 0;
   //Define Number of Vectors
@@ -24,18 +25,13 @@ int main(){
     Va.push_back(temp);
   }
 
-  for(int i = 0; i < q; i++){
-    cin >> qn;
-    
-
+  for(int k = 0; k < q; k++){
+    cin >> qn >> qElement;
+    Vq.push_back(Va[qn][qElement]);
   }
-
   //print the vector
-  for(unsigned int i = 0; i < Va.size(); i++){
-    for(unsigned int j = 0; j < Va[i].size(); j++){
-      cout << Va[i][j] << " ";
-    }
-    cout << endl;
+  for(unsigned int k = 0; k < q; k++){
+    cout << Vq[k] << endl;
   }
 
 
